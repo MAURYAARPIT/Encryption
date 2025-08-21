@@ -1,5 +1,4 @@
 //==============================================================================
-// CORRECTED: aes_inv_sbox.v
 // Description: Contains the official FIPS-197 Inverse S-Box values.
 //==============================================================================
 `timescale 1ns/1ps
