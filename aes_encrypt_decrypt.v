@@ -1,6 +1,4 @@
 //==============================================================================
-// CORRECTED FILE: aes_encrypt_decrypt.v
-//==============================================================================
 `timescale 1ns/1ps
 
 // --- Encryption Module (This was already working correctly) ---
