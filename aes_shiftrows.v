@@ -1,5 +1,4 @@
 //==============================================================================
-// CORRECTED: aes_shiftrows.v
 // Description: Implements ShiftRows and InvShiftRows using the official
 // FIPS-197 column-major byte mapping.
 //==============================================================================
@@ -74,4 +73,5 @@ module aes_inv_shiftrows (
     assign state_out[71:64]   = state_in[39:32];
     assign state_out[39:32]   = state_in[7:0];
     assign state_out[7:0]     = state_in[103:96];
+
 endmodule
