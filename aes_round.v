@@ -1,6 +1,4 @@
 //==============================================================================
-// CORRECTED FILE: aes_round.v
-//==============================================================================
 `timescale 1ns/1ps
 
 // --- Encryption Round Module (This was already working correctly) ---
@@ -18,8 +16,7 @@ module aes_round (
 endmodule
 
 
-// --- Inverse Round Module (This is the corrected version) ---
-// It now correctly performs all 4 steps in the standard order for rounds 9 down to 1.
+// --- Inverse Round Module ---
 module aes_inv_round (
     input  [127:0] state_in,
     input  [127:0] round_key,
@@ -36,4 +33,5 @@ module aes_inv_round (
     aes_inv_subbytes   isb_m(.state_in(isr_out),  .state_out(isb_out));
     aes_addroundkey    ark_m(.state_in(isb_out),  .round_key(round_key), .state_out(ark_out));
     aes_inv_mixcolumns imc_m(.state_in(ark_out),  .state_out(state_out));
+
 endmodule
