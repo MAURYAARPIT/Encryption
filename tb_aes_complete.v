@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 //==============================================================================
-// Final Testbench - Verilog-1995 Compatible
+// Testbench - Verilog-1995 Compatible
 //==============================================================================
 
 module tb_aes;
@@ -76,9 +76,9 @@ module tb_aes;
         $display("Expected  : %032h", expected_ciphertext);
 
         if (captured_ciphertext == expected_ciphertext) begin
-            $display("Encryption result: PASSED ✅");
+            $display("Encryption result: PASSED ");
         end else begin
-            $display("Encryption result: FAILED ❌");
+            $display("Encryption result: FAILED ");
         end
 
         #50;
@@ -106,9 +106,9 @@ module tb_aes;
         $display("Expected  : %032h", test_plaintext);
 
         if (recovered_plaintext == test_plaintext) begin
-            $display("Decryption result: PASSED ✅");
+            $display("Decryption result: PASSED ");
         end else begin
-            $display("Decryption result: FAILED ❌");
+            $display("Decryption result: FAILED ");
         end
 
         $display("\nSimulation Complete.");
